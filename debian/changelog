@@ -1,5 +1,5 @@
-gmobile (0.1.0) experimental; urgency=medium
+gmobile (0.1.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Initial Debian packaging (Closes: #1068238)
 
- -- Guido Günther <agx@sigxcpu.org>  Fri, 08 Mar 2024 17:57:06 +0100
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 02 Apr 2024 16:30:30 +0200
