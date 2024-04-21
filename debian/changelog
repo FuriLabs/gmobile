@@ -1,3 +1,9 @@
+gmobile (0.1.0-2) unstable; urgency=medium
+
+  * d/control: Add Vcs URLs
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 21 Apr 2024 12:54:29 +0200
+
 gmobile (0.1.0-1) unstable; urgency=medium
 
   * Initial Debian packaging (Closes: #1068238)
