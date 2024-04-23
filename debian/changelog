@@ -1,3 +1,11 @@
+gmobile (0.1.0-3) unstable; urgency=medium
+
+  * tests: Build depend on build-essential.
+    We want to compile the test program
+  * tests: Test cutout selection too
+
+ -- Guido Günther <agx@sigxcpu.org>  Tue, 23 Apr 2024 16:43:32 +0200
+
 gmobile (0.1.0-2) unstable; urgency=medium
 
   * d/control: Add Vcs URLs
