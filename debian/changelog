@@ -1,3 +1,10 @@
+gmobile (0.2.0-2) unstable; urgency=medium
+
+  * Source only upload after NEW processing
+  * data: Add wakeup key info for OnePlus 6/6T
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 27 May 2024 07:21:05 +0200
+
 gmobile (0.2.0-1) unstable; urgency=medium
 
   * New upstream release
