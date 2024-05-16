@@ -1,9 +1,9 @@
 # gmobile
 
-gmobile carries some helpers for GNOME on mobile devices. Some of those parts
-might move to glib or libgnome-desktop eventually. It is currently meant to be
-used as a git submodule by projects. There aren't any API stability guarantees
-at this point in time.
+gmobile carries some helpers for glib based environments on mobile devices.
+Some of those parts might move to glib or libgnome-desktop eventually. It can
+be used as a shared library or git submodule. There aren't any API stability
+guarantees at this point in time.
 
 ## License
 
@@ -36,6 +36,9 @@ API documentation is available at https://world.pages.gitlab.gnome.org/Phosh/gmo
 # Adding a new device
 If you want to add display panel information for a new device see
 this post on [notch support](https://phosh.mobi/posts/notch-support/).
+
+If you want to add support for wakeup keys see the
+[manpage](./doc/gmobile.udev.rst).
 
 # Getting in Touch
 * Issue tracker: https://gitlab.gnome.org/World/Phosh/gmobile/-/issues
