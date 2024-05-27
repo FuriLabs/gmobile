@@ -1,0 +1,57 @@
+From: =?utf-8?q?Guido_G=C3=BCnther?= <agx@sigxcpu.org>
+Date: Sun, 26 May 2024 10:38:14 +0200
+Subject: data: Add wakeup key info for OnePlus 6/6T
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Guido Günther <agx@sigxcpu.org>
+---
+ data/61-gmobile-wakeup.hwdb | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+
+diff --git a/data/61-gmobile-wakeup.hwdb b/data/61-gmobile-wakeup.hwdb
+index b14e9be..abf735b 100644
+--- a/data/61-gmobile-wakeup.hwdb
++++ b/data/61-gmobile-wakeup.hwdb
+@@ -48,12 +48,25 @@
+ #  GM_WAKEUP_KEY_115=0
+ # would remove the volume keys from the list of wakeup keys
+ 
++###########################################################
++# OnePlus
++###########################################################
++
++# OnePlus 6. 114,115 are the volume keys
++gmobile:name:Volume keys:dt:oneplus,enchilada*
++ GM_WAKEUP_KEY_114=0
++ GM_WAKEUP_KEY_115=0
++
++# OnePlus 6T. 114,115 are the volume keys
++gmobile:name:Volume keys:dt:oneplus,fajita*
++ GM_WAKEUP_KEY_114=0
++ GM_WAKEUP_KEY_115=0
++
+ ###########################################################
+ # Pine64
+ ###########################################################
+ 
+ # PinePhone beta. 114,115 are the volume keys
+-
+ gmobile:name:1c21800.lradc:dt:pine64,pinephone-1.2pine64*
+  GM_WAKEUP_KEY_114=0
+  GM_WAKEUP_KEY_115=0
+@@ -63,13 +76,11 @@ gmobile:name:1c21800.lradc:dt:pine64,pinephone-1.2pine64*
+ ###########################################################
+ 
+ # Purism Librem 11 tablet. 114,115 are the volume keys
+-
+ gmobile:atkbd:dmi:bvn*:bvr*:svnPurism:pnLibrem11:*
+  GM_WAKEUP_KEY_114=0
+  GM_WAKEUP_KEY_115=0
+ 
+ # Purism Librem 5 phone. 114,115 are the volume keys
+-
+ gmobile:name:gpio-keys:dt:purism,librem5*
+  GM_WAKEUP_KEY_114=0
+  GM_WAKEUP_KEY_115=0
