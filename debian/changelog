@@ -1,3 +1,10 @@
+gmobile (0.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Drop patches. Applied upstream.
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 22 Jun 2024 10:26:55 +0200
+
 gmobile (0.2.0-2) unstable; urgency=medium
 
   * Source only upload after NEW processing
