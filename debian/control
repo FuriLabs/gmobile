@@ -82,7 +82,7 @@ Description: GObject introspection data for gmobile
  gmobile is a library containing mobile related helpers for
  glib based projects.
  .
- This package contains introspection data for the gmoible library.
+ This package contains introspection data for the gmobile library.
 
 Package: libgmobile-doc
 Section: doc
