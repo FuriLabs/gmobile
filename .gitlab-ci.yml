@@ -2,7 +2,9 @@ include:
  - project: 'guidog/meta-phosh'
    ref: 'f3c92e90dcc0d65322888217429b75dd101bd0d3'
    file: '/ci/phosh-common-jobs.yml'
- - remote: 'https://gitlab.freedesktop.org/freedesktop/ci-templates/-/raw/d03cddbcff35f26861429fc816c00323f48e99af/templates/ci-fairy.yml'
+ - project: 'Infrastructure/Mirrors/lorry-mirrors/gitlab_freedesktop_org/freedesktop/ci-templates'
+   ref: 'b791bd48996e3ced9ca13f1c5ee82be8540b8adb'
+   file: '/templates/ci-fairy.yml'
 
 stages:
   - build
@@ -38,7 +40,7 @@ variables:
   # For ci-fairy
   FDO_UPSTREAM_REPO: World/Phosh/gmobile
   DEPS: >-
-    ccache build-essential git gcovr wget python3-lxml
+    ccache build-essential git gcovr
   DEBIAN_IMAGE: debian:trixie
 
 .before: &before
@@ -48,8 +50,6 @@ variables:
   - apt-get -y install eatmydata
   - eatmydata apt-get -y install $DEPS
   - eatmydata apt-get -y build-dep .
-  - wget https://snapshot.debian.org/archive/debian/20240130T090818Z/pool/main/g/gcovr/gcovr_7.0-1_all.deb
-  - dpkg -i gcovr_7.0-1_all.deb && rm -f gcovr_7.0-1_all.deb
 
 .build: &build_steps
     echo "BUILD_OPTS=${BUILD_OPTS}" &&
