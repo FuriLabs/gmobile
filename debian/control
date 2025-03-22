@@ -11,7 +11,7 @@ Build-Depends:
  meson,
  pkgconf,
  python3-docutils <!nodoc>,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Section: libs
 Homepage: https://gitlab.gnome.org/World/Phosh/gmobile/
 Vcs-Browser: https://salsa.debian.org/DebianOnMobile-team/gmobile
