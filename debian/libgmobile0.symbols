@@ -21,6 +21,7 @@ libgmobile.so.0 libgmobile0 #MINVER#
  gm_display_panel_new_from_resource@Base 0.1.0
  gm_error_quark@Base 0.1.0
  gm_init@Base 0.1.0
+ gm_list_devices@Base 0.2.2
  gm_rect_get_type@Base 0.1.0
  gm_svg_path_get_bounding_box@Base 0.1.0
  gm_timeout_add_seconds_once@Base 0.1.0
