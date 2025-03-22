@@ -1,8 +1,11 @@
-gmobile (0.2.2-1) UNRELEASED; urgency=medium
+gmobile (0.2.2-1) unstable; urgency=medium
 
   * New upstream release
+  * Bump standards version
+  * Wrap and sort
+  * symbols: Add new symbol
 
- -- Guido Günther <agx@sigxcpu.org>  Sat, 22 Mar 2025 08:39:25 +0100
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 22 Mar 2025 08:46:42 +0100
 
 gmobile (0.2.1-1) unstable; urgency=medium
 
