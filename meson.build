@@ -1,5 +1,5 @@
 project('gmobile', 'c',
-        version: '0.2.1',
+        version: '0.2.2',
         license: 'LGPLv2.1+',
         meson_version: '>= 0.56.1',
         default_options: [ 'warning_level=1', 'buildtype=debugoptimized', 'c_std=gnu11' ],
@@ -60,8 +60,8 @@ if get_option('buildtype') != 'plain'
 endif
 
 epoll_dep = dependency('epoll-shim', required: false)
-glib_dep = dependency('glib-2.0', version: '>=2.66')
-gio_dep = dependency('gio-2.0', version: '>=2.66')
+glib_dep = dependency('glib-2.0', version: '>=2.78')
+gio_dep = dependency('gio-2.0', version: '>=2.78')
 json_glib_dep = dependency('json-glib-1.0', version: '>= 1.6.2',
                    fallback: ['json-glib', 'json_glib_dep'])
 

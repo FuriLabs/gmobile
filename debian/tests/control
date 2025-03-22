@@ -1,7 +1,15 @@
-Tests: build-test
-Depends: libgmobile-dev, pkgconf, build-essential
-Restrictions: allow-stderr, superficial
+Tests:
+ build-test,
+Depends:
+ build-essential,
+ libgmobile-dev,
+ pkgconf,
+Restrictions:
+ allow-stderr,
+ superficial,
 
 Test-Command: gm-display-panel-preview -c purism,librem5
-Depends: libgmobile-examples
-Restrictions: superficial
+Depends:
+ libgmobile-examples,
+Restrictions:
+ superficial,
