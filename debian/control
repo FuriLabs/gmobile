@@ -1,7 +1,8 @@
 Source: gmobile
 Priority: optional
 Maintainer: DebianOnMobile Maintainers <debian-on-mobile-maintainers@alioth-lists.debian.net>
-Uploaders: Guido Günther <agx@sigxcpu.org>
+Uploaders:
+ Guido Günther <agx@sigxcpu.org>,
 Build-Depends:
  debhelper-compat (= 13),
  gi-docgen <!nodoc>,
@@ -23,11 +24,11 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- ${misc:Depends},
  gir1.2-gm-0 (= ${binary:Version}),
- libgmobile0 (= ${binary:Version}),
  libglib2.0-dev,
+ libgmobile0 (= ${binary:Version}),
  libjson-glib-dev,
+ ${misc:Depends},
 Description: Mobile related helpers - development headers
  gmobile is a library containing mobile related helpers for
  glib based projects.
@@ -38,9 +39,9 @@ Package: libgmobile0
 Architecture: any
 Multi-Arch: same
 Depends:
+ libgmobile-common (>= ${source:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
- libgmobile-common (>= ${source:Version}),
 Description: Mobile related helpers - shared library
  gmobile is a library containing mobile related helpers for
  glib based projects.
@@ -51,8 +52,10 @@ Package: libgmobile-common
 Section: misc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
-Recommends: libgmobile0
+Depends:
+ ${misc:Depends},
+Recommends:
+ libgmobile0,
 Description: common files for the gmobile library
  gmobile is a library containing mobile related helpers for
  glib based projects.
@@ -88,9 +91,12 @@ Package: libgmobile-doc
 Section: doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
-Recommends: libglib2.0-doc,
-Suggests: devhelp
+Depends:
+ ${misc:Depends},
+Recommends:
+ libglib2.0-doc,
+Suggests:
+ devhelp,
 Description: documentation for the gmobile library
  gmobile is a library containing mobile related helpers for
  glib based projects.
