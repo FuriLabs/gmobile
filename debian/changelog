@@ -1,3 +1,10 @@
+gmobile (0.2.2-2) unstable; urgency=medium
+
+  * libgmobile-common: Reload udev rules on package updates.
+    Since we're part of a library we don't add a udev dependency.
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 29 Mar 2025 16:44:36 +0100
+
 gmobile (0.2.2-1) unstable; urgency=medium
 
   * New upstream release
