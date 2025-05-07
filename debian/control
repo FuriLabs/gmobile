@@ -12,6 +12,7 @@ Build-Depends:
  meson,
  pkgconf,
  python3-docutils <!nodoc>,
+ valac,
 Standards-Version: 4.7.2
 Section: libs
 Homepage: https://gitlab.gnome.org/World/Phosh/gmobile/
