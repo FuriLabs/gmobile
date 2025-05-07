@@ -1,3 +1,9 @@
+gmobile (0.3.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 07 May 2025 18:19:13 +0200
+
 gmobile (0.2.2-2) unstable; urgency=medium
 
   * libgmobile-common: Reload udev rules on package updates.
