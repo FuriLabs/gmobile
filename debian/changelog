@@ -1,3 +1,17 @@
+gmobile (0.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    The actual library changes are fairly minimal (introducing two new symbols
+    that nothing in Trixie will depend on) but the fact that upstream now ships
+    the tests as installed tests makes this worthwhile for Trixie.
+  * packaging: Install tests to examples
+  * packaging: Add autopkgtest that runs the installed tests giving
+    us non-superficial autopkgtests
+  * Install vapi files
+  * Add two new symbols
+
+ -- Guido Günther <agx@sigxcpu.org>  Wed, 07 May 2025 18:30:35 +0200
+
 gmobile (0.2.2-2) unstable; urgency=medium
 
   * libgmobile-common: Reload udev rules on package updates.

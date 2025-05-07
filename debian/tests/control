@@ -13,3 +13,14 @@ Depends:
  libgmobile-examples,
 Restrictions:
  superficial,
+
+Tests:
+ installed-tests,
+Restrictions:
+ allow-stderr,
+Depends:
+ dbus,
+ gnome-desktop-testing,
+ libgmobile-examples,
+ xauth,
+ xvfb,
