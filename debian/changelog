@@ -1,3 +1,9 @@
+gmobile (0.3.1-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 29 May 2025 14:30:00 +0200
+
 gmobile (0.3.0-1) unstable; urgency=medium
 
   * New upstream release.
