@@ -1,3 +1,12 @@
+gmobile (0.3.1-1) unstable; urgency=medium
+
+  * New upstream bugfix only release
+    * Fix PinePhone hwdb entry (Closes: #1104911)
+    * Fix corner radius on Oneplus 6
+  * Drop patches. Applied upstream
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 29 May 2025 14:31:34 +0200
+
 gmobile (0.3.0-1) unstable; urgency=medium
 
   * New upstream release.
