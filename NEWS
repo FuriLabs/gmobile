@@ -1,10 +1,14 @@
-gmobile 0.3.1
+gmobile 0.4.0
 -------------
-Released May 2025
-* data: Add border radius for oneplus,enchilada
-* data/hwdb: Insert empty line to indicate a new input device.
-  tests: Fix name of not-installed test
+Released June 2025
+* Add MCC to ISO country code conversion.
+* Wakeup key support for:
+  * Fairphone 5
+  * FuriPhone FLX1
+* Display panel support for:
+  * Fix border radius for OnePlus6
 * Contributors:
+    * Bardia Moshiri
     * Evangelos Ribeiro Tzaras
     * fossdd
     * Guido Günther

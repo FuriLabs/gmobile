@@ -1,7 +1,7 @@
 project(
   'gmobile',
   'c',
-  version: '0.3.1',
+  version: '0.4.0',
   license: 'LGPLv2.1+',
   meson_version: '>= 0.56.1',
   default_options: ['warning_level=1', 'buildtype=debugoptimized', 'c_std=gnu11'],
@@ -102,7 +102,7 @@ summary(
     'Tests': get_option('tests'),
     'Introspection': get_option('introspection'),
     'VAPI': get_option('vapi'),
-    'Docmentation': get_option('gtk_doc'),
+    'Documentation': get_option('gtk_doc'),
     'Manual pages': get_option('man'),
     'Hwdb': get_option('hwdb'),
   },
