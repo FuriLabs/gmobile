@@ -1,3 +1,17 @@
+gmobile (0.4.0-1) experimental; urgency=medium
+
+  * Upload to experimental
+  * New upstream release
+    * Add MCC to ISO country code conversion.
+    * Wakeup key support for:
+      * Fairphone 5
+      * FuriPhone FLX1
+    * Display panel support for:
+      * Fix border radius for OnePlus6
+  * Add new library symbols
+
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 22 Jun 2025 11:03:40 +0200
+
 gmobile (0.3.1-1) unstable; urgency=medium
 
   * New upstream bugfix only release

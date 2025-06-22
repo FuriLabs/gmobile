@@ -22,9 +22,11 @@ libgmobile.so.0 libgmobile0 #MINVER#
  gm_error_quark@Base 0.1.0
  gm_init@Base 0.1.0
  gm_list_devices@Base 0.2.2
+ gm_mcc_to_iso@Base 0.4.0
  gm_rect_get_type@Base 0.1.0
  gm_svg_path_get_bounding_box@Base 0.1.0
  gm_timeout_add_seconds_once@Base 0.1.0
  gm_timeout_add_seconds_once_full@Base 0.1.0
  gm_wakeup_timeout_add_seconds_once@Base 0.3.0
  gm_wakeup_timeout_add_seconds_once_full@Base 0.3.0
+ mcc_list@Base 0.4.0
