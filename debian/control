@@ -57,6 +57,8 @@ Depends:
  ${misc:Depends},
 Recommends:
  libgmobile0,
+Suggests:
+ udev,
 Description: common files for the gmobile library
  gmobile is a library containing mobile related helpers for
  glib based projects.
