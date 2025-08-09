@@ -1,3 +1,9 @@
+gmobile (0.4.0-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 09 Aug 2025 12:34:19 +0200
+
 gmobile (0.4.0-1) experimental; urgency=medium
 
   * Upload to experimental
