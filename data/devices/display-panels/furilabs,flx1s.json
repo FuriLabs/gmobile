@@ -1,0 +1,12 @@
+{
+    "name": "FuriLabs FLX1s",
+    "x-res": 720,
+    "y-res": 1600,
+    "border-radius": 75,
+    "cutouts": [
+        {
+            "name": "notch",
+            "path": "M 324,0 L 324,102 L 396,102 L 396,0 L 360,0 Z"
+        }
+    ]
+}
