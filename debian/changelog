@@ -1,3 +1,12 @@
+gmobile (0.4.0-3) unstable; urgency=medium
+
+  [ Santiago Vila ]
+  * d/rules: Always build tests
+    dh_auto_test will skip them when appropriate and
+    we need them for the installed tests. (Closes: #1116742)
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 16 Oct 2025 09:25:27 +0200
+
 gmobile (0.4.0-2) unstable; urgency=medium
 
   * Upload to unstable
