@@ -1,8 +1,11 @@
-gmobile (0.5.0-1) UNRELEASED; urgency=medium
+gmobile (0.5.0-1) unstable; urgency=medium
 
   * New upstream release
+    * Add display information for Fairphone 6
+    * Allow to run gm-display-panel-run-phosh headless allowing one to use
+      the tool with compositors that restrict window sizes and in ci.
 
- -- Guido Günther <agx@sigxcpu.org>  Sun, 09 Nov 2025 18:58:19 +0100
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 09 Nov 2025 19:25:46 +0100
 
 gmobile (0.4.0-3) unstable; urgency=medium
 
