@@ -20,10 +20,12 @@
 
 #include <math.h>
 
+#define PHOC_BIN "phoc"
 #define PHOSH_BIN "/usr/libexec/phosh"
 
 GMainLoop   *loop;
 GSubprocess *phoc;
+GDBusProxy  *proxy;
 
 G_NORETURN static void
 print_version (void)
@@ -33,17 +35,26 @@ print_version (void)
 }
 
 
-static gboolean
-on_shutdown_signal (gpointer unused)
+static void
+quit(void)
 {
   g_autoptr (GError) err = NULL;
   gboolean success;
+
+  g_subprocess_send_signal (phoc, SIGTERM);
 
   success = g_subprocess_wait (phoc, NULL, &err);
   if (!success)
     g_warning ("Failed to terminate phoc: %s", err->message);
 
   g_main_loop_quit (loop);
+}
+
+
+static gboolean
+on_shutdown_signal (gpointer unused)
+{
+  quit();
 
   return G_SOURCE_REMOVE;
 }
@@ -118,6 +129,60 @@ phoc_utils_compute_scale (int32_t phys_width, int32_t phys_height,
 }
 
 
+static void
+on_screenshot_proxy_ready (GObject *source_object, GAsyncResult *res, gpointer user_data)
+{
+  g_autoptr (GError) err = NULL;
+  g_autoptr (GVariant) result = NULL;
+  const char *filename, *template = user_data;
+  gboolean success;
+
+  g_assert (template);
+  proxy = g_dbus_proxy_new_for_bus_finish (res, &err);
+  if (!proxy) {
+    g_critical ("Failed to get screensaver proxy: %s", err->message);
+    if (!g_error_matches (err, G_IO_ERROR, G_IO_ERROR_CANCELLED))
+      quit ();
+    return;
+  }
+
+  result = g_dbus_proxy_call_sync (proxy, "Screenshot",
+                                   g_variant_new ("(bbs)",
+                                                  FALSE,
+                                                  FALSE,
+                                                  template),
+                                   G_DBUS_CALL_FLAGS_NONE,
+                                   -1,
+                                   NULL,
+                                   &err);
+  if (!result) {
+    g_warning ("Failed to take screenshot: %s", err->message);
+  } else {
+    g_variant_get (result, "(b&s)", &success, &filename);
+    g_print ("Took screenshot '%s'", filename);
+  }
+
+  quit ();
+}
+
+
+static void
+on_timeout (gpointer user_data)
+{
+  char *template = user_data;
+
+  g_dbus_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+                            G_DBUS_PROXY_FLAGS_NONE,
+                            NULL,
+                            "org.gnome.Shell.Screenshot",
+                            "/org/gnome/Shell/Screenshot",
+                            "org.gnome.Shell.Screenshot",
+                            NULL,
+                            on_screenshot_proxy_ready,
+                            template);
+}
+
+
 
 int
 main (int argc, char **argv)
@@ -129,10 +194,11 @@ main (int argc, char **argv)
   g_auto (GStrv) compatibles = NULL;
   GmDisplayPanel *panel = NULL;
   GStrv compatibles_opt = NULL;
+  char *screenshot_name = NULL;
   g_autofree char *phoc_ini = NULL;
   g_autoptr (GSubprocessLauncher) phoc_launcher = NULL;
   double scale_opt = -1.0;
-  const char *phosh_bin, *backend;
+  const char *phosh_bin, *phoc_bin, *backend;
 
   const GOptionEntry options [] = {
     {"compatible", 'c', 0, G_OPTION_ARG_STRING_ARRAY, &compatibles_opt,
@@ -141,6 +207,8 @@ main (int argc, char **argv)
      "The display scale", NULL },
     {"headless", 'H', 0, G_OPTION_ARG_NONE, &headless,
      "Use headless backend", NULL },
+    {"screenshot", 'S', 0, G_OPTION_ARG_FILENAME, &screenshot_name,
+     "Take screenshot with the given name", NULL},
     {"version", 0, 0, G_OPTION_ARG_NONE, &version,
      "Show version information", NULL},
     { NULL, 0, 0, G_OPTION_ARG_NONE, NULL, NULL, NULL }
@@ -190,10 +258,11 @@ main (int argc, char **argv)
 
   backend = headless ? "headless" : "wayland";
   phosh_bin = g_getenv ("PHOSH_BIN") ?: PHOSH_BIN;
+  phoc_bin = g_getenv ("PHOC_BIN") ?: PHOC_BIN;
   phoc_launcher = g_subprocess_launcher_new (G_SUBPROCESS_FLAGS_SEARCH_PATH_FROM_ENVP);
   g_subprocess_launcher_set_environ (phoc_launcher, NULL);
   g_subprocess_launcher_setenv (phoc_launcher, "GSETTINGS_BACKEND", "memory", TRUE);
-  g_subprocess_launcher_setenv (phoc_launcher, "PHOC_DEBUG", "cutouts", TRUE);
+  g_subprocess_launcher_setenv (phoc_launcher, "PHOC_DEBUG", "cutouts,fake-builtin", TRUE);
   g_subprocess_launcher_setenv (phoc_launcher, "PHOSH_DEBUG", "fake-builtin", TRUE);
   g_subprocess_launcher_setenv (phoc_launcher, "G_MESSAGES_DEBUG", "phosh-layout-manager", TRUE);
   if (compatibles_opt && compatibles_opt[0]) {
@@ -204,11 +273,14 @@ main (int argc, char **argv)
 
   phoc = g_subprocess_launcher_spawnv (phoc_launcher,
                                        (const char * const [])
-                                       { "phoc", "-C", phoc_ini,
+                                       { phoc_bin, "-C", phoc_ini,
                                          "-E", phosh_bin, NULL },
                                        &err);
   g_unix_signal_add (SIGTERM, on_shutdown_signal, NULL);
   g_unix_signal_add (SIGINT, on_shutdown_signal, NULL);
+
+  if (screenshot_name)
+    g_timeout_add_seconds_once (2, on_timeout, screenshot_name);
 
   loop = g_main_loop_new (NULL, FALSE);
 
