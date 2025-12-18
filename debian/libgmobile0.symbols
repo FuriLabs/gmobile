@@ -9,6 +9,8 @@ libgmobile.so.0 libgmobile0 #MINVER#
  gm_device_info_new@Base 0.1.0
  gm_device_tree_get_compatibles@Base 0.1.0
  gm_display_panel_get_border_radius@Base 0.1.0
+ gm_display_panel_get_corner_radii@Base 0.6.0~beta1
+ gm_display_panel_get_corner_radii_array@Base 0.6.0~beta1
  gm_display_panel_get_cutouts@Base 0.1.0
  gm_display_panel_get_height@Base 0.1.0
  gm_display_panel_get_name@Base 0.1.0
