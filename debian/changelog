@@ -1,3 +1,14 @@
+gmobile (0.6.0~beta1-1) unstable; urgency=medium
+
+  * New upstream release
+    * Allow for different corner radii
+    * Add hwdb and udev rule to configure minimum torch brightness
+    * Oneplus 6: Use different corner radii for top and bottom
+    * Leak fixes
+  * Update symbols
+
+ -- Guido Günther <agx@sigxcpu.org>  Thu, 18 Dec 2025 15:30:17 +0100
+
 gmobile (0.5.0-1) unstable; urgency=medium
 
   * New upstream release
