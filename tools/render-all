@@ -3,7 +3,7 @@
 set -e
 
 OUT=_build/out/
-DTS=$(sed -n -e 's,.*devices/display-panels/\([a-z0-9,]\+\).json<.*,\1,p' data/gmobile.gresources.xml)
+DTS=$(sed -n -e 's,.*devices/display-panels/\([a-z0-9,\-]\+\).json<.*,\1,p' data/gmobile.gresources.xml)
 
 export G_DEBUG=fatal-warnings
 
