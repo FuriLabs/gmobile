@@ -6,7 +6,7 @@ gmobile (0.7.0-1) unstable; urgency=medium
       * Motorola edge 30
       * Motorola Moto G7
       * SHIFT6mq
-    * Fix suppport for Pixel 6 and 6 pro
+    * Fix support for Pixel 6 and 6 pro
 
  -- Guido Günther <agx@sigxcpu.org>  Fri, 03 Apr 2026 10:36:27 +0200
 
