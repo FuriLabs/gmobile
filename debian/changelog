@@ -1,8 +1,12 @@
-gmobile (0.7.1-1) UNRELEASED; urgency=medium
+gmobile (0.7.1-1) unstable; urgency=medium
 
   * New upstream release
+    * Display panel support for:
+      * MacBook Pro 14-inch, M1 Pro, 2021
+      * MacBook Pro 14-inch, M2 Pro, 2023
+      * Xiaomi Redmi Note 10 Pro
 
- -- Guido Günther <agx@sigxcpu.org>  Sun, 10 May 2026 11:54:22 +0200
+ -- Guido Günther <agx@sigxcpu.org>  Sun, 10 May 2026 11:55:43 +0200
 
 gmobile (0.7.0-1) unstable; urgency=medium
 
