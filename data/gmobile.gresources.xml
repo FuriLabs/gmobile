@@ -2,6 +2,8 @@
 <gresources>
   <gresource prefix="/mobi/phosh/gmobile/">
     <!-- Devices with one panel matched by their DT compatible -->
+    <file preprocess="json-stripblanks">devices/display-panels/apple,j314s.json</file>
+    <file preprocess="json-stripblanks">devices/display-panels/apple,j414s.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/daria,zahedan.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/fairphone,fp4.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/fairphone,fp5.json</file>
@@ -33,5 +35,6 @@
     <file preprocess="json-stripblanks">devices/display-panels/xiaomi,joyeuse.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/xiaomi,onclite.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/xiaomi,lavender.json</file>
+    <file preprocess="json-stripblanks">devices/display-panels/xiaomi,sweet.json</file>
   </gresource>
 </gresources>
