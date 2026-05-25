@@ -18,6 +18,7 @@ if get_option('examples')
     'gm-display-panel-run-phosh',
     ['gm-display-panel-run-phosh.c'],
     dependencies: [gmobile_shared_dep],
+    c_args: [f'-DLIBEXECDIR="@libexecdir@"'],
     install: true,
   )
 
