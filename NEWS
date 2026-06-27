@@ -1,3 +1,11 @@
+gmobile 0.7.2
+-------------
+Released June 2026
+* Don't leak libexecdir into public headers
+* Make sure we render all devices in tests
+* Contributors:
+    * Guido Günther
+
 gmobile 0.7.1
 -------------
 Released May 2026

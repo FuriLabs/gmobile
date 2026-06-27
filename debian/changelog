@@ -1,3 +1,12 @@
+gmobile (0.7.2) experimental; urgency=medium
+
+  * build: Don't set libexecdir in gm-config.h.
+    It's a public header
+    Fixes: 06c8502 ("display-panel-run-phosh: Use meson's libexecdir to guess libexecdir of phosh")
+  * render-all: Allow for `-` in device names
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 26 Jun 2026 10:43:15 +0200
+
 gmobile (0.7.1) experimental; urgency=medium
 
   [ David Heidelberg ]
