@@ -1,3 +1,9 @@
+gmobile (0.7.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 27 Jun 2026 16:11:34 +0200
+
 gmobile (0.7.1-1) unstable; urgency=medium
 
   * New upstream release
