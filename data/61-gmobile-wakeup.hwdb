@@ -182,3 +182,15 @@ gmobile:name:gpio-keys:dt:xiaomi,daisy*
 
 gmobile:name:pm8941_resin:dt:xioami,daisy*
  GM_WAKEUP_KEY_114=0
+
+###########################################################
+# Nothing
+###########################################################
+
+# Nothing Phone 1 (nothing-spacewar). 114+115 are volume buttons
+
+gmobile:name:gpio-keys:dt:nothing,spacewar*
+ GM_WAKEUP_KEY_115=0
+
+gmobile:name:pmic_resin:dt:nothing,spacewar*
+ GM_WAKEUP_KEY_114=0

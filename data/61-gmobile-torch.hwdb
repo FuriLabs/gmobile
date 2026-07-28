@@ -63,3 +63,12 @@ gmobile:name:white:flash:dt:xiaomi,beryllium*
 
 gmobile:name:yellow:flash:dt:xiaomi,beryllium*
  GM_TORCH_MIN_BRIGHTNESS=1
+
+###########################################################
+# Nothing
+###########################################################
+
+# Nothing Phone 1 (nothing-spacewar)
+
+gmobile:name:white:flash:dt:nothing,spacewar*
+ GM_TORCH_MIN_BRIGHTNESS=1
