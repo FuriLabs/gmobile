@@ -1,3 +1,16 @@
+gmobile (0.7.3) experimental; urgency=medium
+
+  [ Vasiliy Doylov ]
+  * data/hwdb: Add Nothing Phone 1
+
+  [ Steffen Deusch ]
+  * data: Add display panel for Pixel 9a (tegu)
+
+  [ Gio ]
+  * data/hwdb: Add Juno Tablet 4 LTE & Wifi
+
+ -- Guido Günther <agx@sigxcpu.org>  Fri, 07 Aug 2026 17:36:31 +0200
+
 gmobile (0.7.2) experimental; urgency=medium
 
   * build: Don't set libexecdir in gm-config.h.
