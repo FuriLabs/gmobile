@@ -105,6 +105,16 @@ gmobile:atkbd:dmi:bvnAmericanMegatrendsInternational,LLC.:bvr*:svnJunoComputers:
  GM_WAKEUP_KEY_114=0
  GM_WAKEUP_KEY_115=0
 
+# Juno Tab 4 LTE tablet. 114,115 are the volume keys
+gmobile:atkbd:dmi:bvnAmericanMegatrendsInternational,LLC.:bvr*:svnJunoComputers:pnjunotab4-lte:*
+ GM_WAKEUP_KEY_114=0
+ GM_WAKEUP_KEY_115=0
+
+# Juno Tab 4 WIFI tablet. 114,115 are the volume keys
+gmobile:atkbd:dmi:bvnAMI:bvr*:svnJunoComputers:pnjunotab4-wifi:*
+ GM_WAKEUP_KEY_114=0
+ GM_WAKEUP_KEY_115=0
+
 ###########################################################
 # OnePlus
 ###########################################################
@@ -181,4 +191,16 @@ gmobile:name:gpio-keys:dt:xiaomi,daisy*
  GM_WAKEUP_KEY_115=0
 
 gmobile:name:pm8941_resin:dt:xioami,daisy*
+ GM_WAKEUP_KEY_114=0
+
+###########################################################
+# Nothing
+###########################################################
+
+# Nothing Phone 1 (nothing-spacewar). 114+115 are volume buttons
+
+gmobile:name:gpio-keys:dt:nothing,spacewar*
+ GM_WAKEUP_KEY_115=0
+
+gmobile:name:pmic_resin:dt:nothing,spacewar*
  GM_WAKEUP_KEY_114=0

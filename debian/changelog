@@ -1,3 +1,14 @@
+gmobile (0.7.3-1) unstable; urgency=medium
+
+  * New upstream release
+    * Display panel support for:
+      * Pixel 9a (tegu)
+    * Wakeup key support for:
+      * Juno Tablet 4 LTE & Wifi
+    * Nothing Phone 1
+
+ -- Guido Günther <agx@sigxcpu.org>  Sat, 08 Aug 2026 21:44:59 +0200
+
 gmobile (0.7.2-1) unstable; urgency=medium
 
   * New upstream release
