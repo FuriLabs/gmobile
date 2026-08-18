@@ -32,6 +32,8 @@ Depends:
  libjson-glib-dev,
  ${gir:Depends},
  ${misc:Depends},
+Provides:
+ ${gir:Provides},
 Description: Mobile related helpers - development headers
  gmobile is a library containing mobile related helpers for
  glib based projects.
