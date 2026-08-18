@@ -27,10 +27,10 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- gir1.2-gm-0 (= ${binary:Version}),
  libglib2.0-dev,
  libgmobile0 (= ${binary:Version}),
  libjson-glib-dev,
+ ${gir:Depends},
  ${misc:Depends},
 Description: Mobile related helpers - development headers
  gmobile is a library containing mobile related helpers for
