@@ -5,8 +5,10 @@ Uploaders:
  Guido Günther <agx@sigxcpu.org>,
 Build-Depends:
  debhelper-compat (= 13),
+ dh-sequence-gir,
  gi-docgen <!nodoc>,
- libgirepository1.0-dev,
+ gir1.2-gio-2.0-dev,
+ gobject-introspection (>= 1.80),
  libglib2.0-dev,
  libjson-glib-dev,
  meson,
@@ -25,11 +27,13 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- gir1.2-gm-0 (= ${binary:Version}),
  libglib2.0-dev,
  libgmobile0 (= ${binary:Version}),
  libjson-glib-dev,
+ ${gir:Depends},
  ${misc:Depends},
+Provides:
+ ${gir:Provides},
 Description: Mobile related helpers - development headers
  gmobile is a library containing mobile related helpers for
  glib based projects.
