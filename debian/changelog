@@ -1,3 +1,23 @@
+gmobile (0.7.4) experimental; urgency=medium
+
+  [ Steffen Deusch ]
+  * data: Include tegu panel in gmobile.gresources.xml.
+    In a previous PR, I added the json file, but forgot to add it to the xml,
+    since I tested with the env var override.
+
+  [ Guido Günther ]
+  * ci: Drop arm64 build. Switch to forky while at that.
+
+  [ redburn ]
+  * fairphone,fp5: Replace border-radius with corner-radii.
+    We bump the radii to 135px. The value was measured from the physical size of the panel.
+
+  [ David Heidelberg ]
+  * data: Add cutout for Pixel 3 XL (crosshatch)
+    Took from the Android data, rounded up to integers.
+
+ -- Guido Günther <agx@sigxcpu.org>  Mon, 28 Sep 2026 10:57:32 +0200
+
 gmobile (0.7.3) experimental; urgency=medium
 
   [ Vasiliy Doylov ]
