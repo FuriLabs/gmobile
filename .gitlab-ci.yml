@@ -153,13 +153,11 @@ check-consistency:
   stage: style-checks
   extends: .phosh-check-consistency
 
-package-deb-debian-trixie:arm64:
+package-deb-debian-forky:
   stage: package
   variables:
-    PHOSH_DOCKER_IMAGE: debian:trixie
+    PHOSH_DOCKER_IMAGE: debian:forky
   extends: .phosh-build-debian-package
-  tags:
-    - aarch64
 
 render-display-info:
   stage: tests

@@ -1,0 +1,13 @@
+{
+    "name": "Google Pixel 3 XL",
+    "x-res": 1440,
+    "y-res": 2960,
+    "width": 70,
+    "height": 144,
+    "cutouts": [
+        {
+            "name": "notch",
+            "path": "M 382 0 q 86 -4 80 72 v 8 q 4 90 95 91 h 326 q 91 -1 95 -91 v -8 q -6 -76 80 -72 Z"
+        }
+    ]
+}
