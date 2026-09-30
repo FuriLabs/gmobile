@@ -15,9 +15,11 @@
     <file preprocess="json-stripblanks">devices/display-panels/motorola,dubai.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/motorola,river.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/nothing,spacewar.json</file>
+    <file preprocess="json-stripblanks">devices/display-panels/google,crosshatch.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/google,gs101-bluejay.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/google,gs101-oriole.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/google,gs101-raven.json</file>
+    <file preprocess="json-stripblanks">devices/display-panels/google,zumapro-tegu.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/oneplus,enchilada.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/oneplus,fajita.json</file>
     <file preprocess="json-stripblanks">devices/display-panels/purism,librem5.json</file>

@@ -2,7 +2,7 @@
   "name": "Fairphone 5",
   "x-res": 1224,
   "y-res": 2700,
-  "border-radius": 100,
+  "corner-radii": [135, 135, 135, 135],
   "width": 68,
   "height": 150,
   "cutouts" : [
